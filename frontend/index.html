@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Minimal User Manager</title>
+  <style>
+    body { font-family: sans-serif; padding: 20px; }
+    input, button { margin: 5px 0; padding: 6px; }
+    table { border-collapse: collapse; width: 100%; margin-top: 20px; }
+    th, td { border: 1px solid #ccc; padding: 8px; }
+  </style>
+</head>
+<body>
+  <h2>👤 Create User</h2>
+  <form id="createUserForm">
+    <input type="email" id="email" placeholder="Email" required />
+    <input type="password" id="password" placeholder="Password" required />
+    <input type="text" id="userType" placeholder="User Type" required />
+    <button type="submit">Create</button>
+  </form>
+
+  <h2>✏️ Update User Name</h2>
+  <form id="updateUserForm">
+    <input type="email" id="updateEmail" placeholder="Email to update" required />
+    <input type="text" id="newName" placeholder="New Name" required />
+    <button type="submit">Update</button>
+  </form>
+
+  <h2>📋 All Users</h2>
+  <button onclick="loadUsers()">Refresh</button>
+  <table>
+    <thead>
+      <tr>
+        <th>Email</th>
+        <th>Name</th>
+        <th>User Type</th>
+      </tr>
+    </thead>
+    <tbody id="userTableBody"></tbody>
+  </table>
+
+  <script src="script.js"></script>
+</body>
+</html>
