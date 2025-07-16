@@ -10,4 +10,7 @@ router.post('/',[body('email').isEmail().normalizeEmail(), body('password').isLe
 
 router.patch('/:email',updateUsers);
 
+
+
+
 module.exports = router;
